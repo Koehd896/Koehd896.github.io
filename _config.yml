@@ -1,0 +1,20 @@
+# Site settings
+author: Douglas Raven Koehler
+title: 
+header-img: img/home-bg.png
+email: ravenkoehler@gmail.com
+copyright_name: Douglas Raven Koehler
+description: > # this means to ignore newlines until "baseurl:"
+  
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  Koehd896
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
