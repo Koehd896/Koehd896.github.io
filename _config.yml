@@ -1,11 +1,11 @@
 # Site settings
-author: Douglas Raven Koehler
-title: 
+author: Raven Koehler
+title: All Things Code
 header-img: img/home-bg.png
 email: ravenkoehler@gmail.com
-copyright_name: Douglas Raven Koehler
+copyright_name: Raven Koehler
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Musings About the Coding Process 
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  Koehd896
