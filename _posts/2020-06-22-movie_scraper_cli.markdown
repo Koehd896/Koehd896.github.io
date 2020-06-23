@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Movie Scraper CLI"
-date:       2020-06-23 03:35:01 +0000
+date:       2020-06-22 23:35:02 -0400
 permalink:  movie_scraper_cli
 ---
 
@@ -47,6 +47,7 @@ I had to add some conditional statements to the get_attributes class method half
 At this point, I had a collection of movie objects with actors and genres attributes. Before going much further, I needed to decide how to structure the code in my CLI class. I knew that I would need many different prompts and error messages, as well as many different instance methods to be called under different conditions. I ultimately framed everything within a loop of displaying output, getting user input, and determining new output based on the user input. I stored error messages and prompts in class constants to declutter the code in other methods. I also created instance variables for the current output, user input, current movie and current list the user is choosing from. This allowed the get_new_output method to essentially reset all of these variables based on various conditions for the next pass of the input loop.
 
 After establising this basic pattern, it was fairly simple to display movies and their details and have the user choose a movie to "play." However, I wanted the user to be able to get a recommendation based on movies their viewing history and the viewing history of other users. This meant I needed to create other users upon starting the program and give all users the ability to rate a movie. I used a 5 "star" rating system (allowing for half stars) and used the following code to instantiate artificial users and have them rate movies:
+
 ```
   def make_users
     n = 1
@@ -65,7 +66,7 @@ After establising this basic pattern, it was fairly simple to display movies and
       end
     end
   end
-	```
+```
 
 This also meant I needed to create a View class so that I could keep track of what each user rated the movies they watched. This established a "has many through" realationship between objects, where users "have many" movies (or had watched many movies) through a viewing (an instance of the View class). Now the user can get a movie recommendation based on actors, genres, their favorite movie, or other users with a similar viewing history. The recommendations based on actors and genres were both based on the users highest rated movie. The actor_rec and genre_rec methods both iterate through all movie objects to find a movie with the same actor or genre as the user's favorite movie that the user hasn't watched yet. For example:
 ```
