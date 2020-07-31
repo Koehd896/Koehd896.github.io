@@ -33,7 +33,7 @@ After the user fills out the form to sign up, the post route in the users contro
       redirect to '/signup'
     end
   end
-	```
+```
 	
 As you can see, a new cart object is also created at this point and associated with the new user. If the user doesn't fill out a required field, uses a username or email already taken, or doesn't accurately re-enter the password, it will redirect to the signup page where the user is prompted to try again.
 
